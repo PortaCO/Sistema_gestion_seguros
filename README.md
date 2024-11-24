@@ -1,47 +1,34 @@
 # Sistema_gestion_seguros
 
-Caso General: Sistema de Gestión de Seguros
-Una compañía aseguradora quiere implementar un sistema de base de datos para gestionar su operación diaria. La compañía ofrece diversos tipos de seguros, como seguros de vida, autos, hogar y salud. Cada cliente puede contratar varias pólizas de diferentes tipos, realizar pagos periódicos y reportar siniestros. Además, la empresa emplea agentes que supervisan las pólizas y ayudan a los clientes en diferentes áreas geográficas.
+Caso: Gestión de Seguros
+Una aseguradora necesita un sistema para administrar las pólizas contratadas por sus clientes. Este sistema debe permitir registrar y consultar información sobre los clientes, las pólizas emitidas, los siniestros reportados y los pagos realizados.
+
+Requisitos
+Clientes:
+Se debe almacenar información básica de los clientes, como su tipo (persona natural o jurídica), nombre completo o razón social, número de identificación, dirección, teléfono y correo electrónico.
+
+Pólizas:
+Cada póliza debe estar asociada a un cliente.
+Se debe registrar el tipo de póliza (vida, auto, hogar, salud), el monto asegurado, la prima mensual, la fecha de inicio y la fecha de expiración.
+Las pólizas deben tener un estado (activa, suspendida o cancelada).
+
+Siniestros:
+Cada siniestro debe estar asociado a una póliza activa.
+Se debe registrar la descripción del siniestro, la fecha en la que ocurrió, el estado del siniestro (pendiente, en proceso, rechazado, aprobado) y el monto reclamado.
+Debe existir un historial de cambios de estado para cada siniestro, incluyendo la fecha y hora de cada cambio.
+
+Pagos:
+Cada pago debe estar asociado a una póliza específica.
+Se debe registrar la fecha del pago, el monto pagado y el método de pago (tarjeta, transferencia, efectivo).
+El sistema debe permitir calcular el estado de cuenta de cada póliza en función de los pagos realizados.
+
+Reglas del Negocio
+Un cliente no puede tener más de una póliza del mismo tipo con la misma fecha de inicio.
+Las pólizas entran en estado "Suspendida" si acumulan más de tres meses de falta de pago.
+Solo se pueden registrar siniestros para pólizas activas.
+El monto asegurado de una póliza debe ser mayor a cero.
 
 Objetivos del Sistema
-El sistema debe permitir:
-
-Gestionar la información de clientes, agentes, pólizas, pagos y siniestros.
-Mantener un historial detallado de siniestros y cambios de estado.
-Supervisar los pagos realizados por los clientes para evitar la suspensión de pólizas.
-Optimizar la asignación de agentes a los clientes con base en áreas geográficas y carga de trabajo.
-Generar reportes que ayuden en la toma de decisiones estratégicas.
-Entidades Principales
-Clientes
-
-Identificación única.
-Datos personales (nombre, dirección, teléfono, correo electrónico).
-Relación con las pólizas contratadas.
-Agentes
-
-Identificación única.
-Datos personales (nombre, área geográfica, contacto).
-Relación con los clientes que supervisan.
-Pólizas
-
-Número único de póliza.
-Tipo de seguro (vida, auto, hogar, salud).
-Fecha de inicio y expiración.
-Monto asegurado.
-Estado de la póliza (activa, suspendida, cancelada).
-Relación con un cliente y un agente.
-Pagos
-
-Identificación única.
-Fecha del pago.
-Monto pagado.
-Método de pago (tarjeta, transferencia, efectivo).
-Relación con una póliza.
-Siniestros
-
-Número de siniestro.
-Descripción.
-Fecha del siniestro.
-Estado (pendiente, en proceso, rechazado, aprobado).
-Relación con una póliza.
-Historial de cambios de estado (con fecha y hora).
+Gestionar la información de clientes, pólizas, siniestros y pagos.
+Generar reportes sobre pólizas activas, pagos pendientes, y siniestros según su estado.
+Automatizar las actualizaciones de estado de las pólizas y los siniestros.
