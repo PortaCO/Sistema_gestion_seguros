@@ -34,5 +34,6 @@ Generar reportes sobre pólizas activas, pagos pendientes, y siniestros según s
 Automatizar las actualizaciones de estado de las pólizas y los siniestros.
 
 #Modelo Entidad Relacion
-![Gestion_Seguros](https://github.com/user-attachments/assets/113875aa-d5da-48f3-88a6-2625f9f51848)
+![Gestion_Seguros](https://github.com/user-attachments/assets/d58eb640-bb5a-4f3a-aa09-486c69c4126f)
+
 
