@@ -32,3 +32,6 @@ El monto asegurado de una póliza debe ser mayor a cero.
 Gestionar la información de clientes, pólizas, siniestros y pagos.
 Generar reportes sobre pólizas activas, pagos pendientes, y siniestros según su estado.
 Automatizar las actualizaciones de estado de las pólizas y los siniestros.
+
+#Modelo Entidad Relacion
+![Gestion_Seguros](https://github.com/user-attachments/assets/db865a69-e73e-473a-9419-ed942f0f8d26)
