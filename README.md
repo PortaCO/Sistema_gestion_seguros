@@ -33,7 +33,8 @@ Gestionar la información de clientes, pólizas, siniestros y pagos.
 Generar reportes sobre pólizas activas, pagos pendientes, y siniestros según su estado.
 Automatizar las actualizaciones de estado de las pólizas y los siniestros.
 
-#Modelo Entidad Relacion
+# Modelo Entidad Relacion
 ![Gestion_Seguros](https://github.com/user-attachments/assets/d58eb640-bb5a-4f3a-aa09-486c69c4126f)
 
-
+# Modelo Logico
+![Modelo_Logico_prueba](https://github.com/user-attachments/assets/a8cf1077-1a51-47c0-a8a3-517462d26767)
