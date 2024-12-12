@@ -24,15 +24,15 @@ Se debe registrar la fecha del pago, el monto pagado y el método de pago (tarje
 El sistema debe permitir calcular el estado de cuenta de cada póliza en función de los pagos realizados.
 
 ## Reglas del Negocio <br>
-Un cliente no puede tener más de una póliza del mismo tipo con la misma fecha de inicio.
-Las pólizas entran en estado "Suspendida" si acumulan más de tres meses de falta de pago.
-Solo se pueden registrar siniestros para pólizas activas.
-El monto asegurado de una póliza debe ser mayor a cero.
+-  Un cliente no puede tener más de una póliza del mismo tipo con la misma fecha de inicio.
+-  Las pólizas entran en estado "Suspendida" si acumulan más de tres meses de falta de pago.
+-  Solo se pueden registrar siniestros para pólizas activas.
+-  El monto asegurado de una póliza debe ser mayor a cero.
 
 ## Objetivos del Sistema <br>
-Gestionar la información de clientes, pólizas, siniestros y pagos.
-Generar reportes sobre pólizas activas, pagos pendientes, y siniestros según su estado.
-Automatizar las actualizaciones de estado de las pólizas y los siniestros.
+-  Gestionar la información de clientes, pólizas, siniestros y pagos.
+-  Generar reportes sobre pólizas activas, pagos pendientes, y siniestros según su estado.
+-  Automatizar las actualizaciones de estado de las pólizas y los siniestros.
 
 # Modelo Entidad Relacion
 ![Gestion_Seguros](https://github.com/user-attachments/assets/d58eb640-bb5a-4f3a-aa09-486c69c4126f)
