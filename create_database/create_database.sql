@@ -1,0 +1,2 @@
+CREATE DATABASE db_gestion_seguros
+go
