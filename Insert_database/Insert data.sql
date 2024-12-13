@@ -40,3 +40,10 @@ GO
 SELECT * FROM CLIENTE;
 SELECT * FROM CLIENTE WHERE ID_AGENTE = 1;
 
+-- Tipo de Poliza
+
+--Importando data de un archivo plano (tipo_poliza_datos.txt)
+SELECT * FROM TIPO_POLIZA
+
+
+

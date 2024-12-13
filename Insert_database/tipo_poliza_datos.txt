@@ -1,0 +1,11 @@
+nombre_tipo	descripcion
+Seguro de Vida	Cobertura en caso de fallecimiento del asegurado
+Seguro de Auto	Cobertura contra accidentes, robo y daños al vehículo
+Seguro de Salud	Cobertura de gastos médicos, hospitalización y cirugías
+Seguro de Hogar	Cobertura contra daños a la propiedad por incendios o robos
+Seguro de Viaje	Cobertura de imprevistos durante viajes como pérdida de equipaje
+Seguro de Accidentes Personales	Cobertura por lesiones accidentales e invalidez
+Seguro de Responsabilidad Civil	Cobertura de daños a terceros en actividades profesionales
+Seguro de Incendio	Cobertura por daños materiales causados por incendios
+Seguro de Robo	Cobertura por pérdidas debido a robo o hurto
+Seguro de Transporte	Cobertura de mercancías durante su transporte
