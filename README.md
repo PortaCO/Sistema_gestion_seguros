@@ -38,4 +38,5 @@ El sistema debe permitir calcular el estado de cuenta de cada póliza en funció
 ![Gestion_Seguros](https://github.com/user-attachments/assets/d58eb640-bb5a-4f3a-aa09-486c69c4126f)
 
 # Modelo Logico
-![Modelo_Logico_prueba](https://github.com/user-attachments/assets/a8cf1077-1a51-47c0-a8a3-517462d26767)
+![Modelo_Logico_prueba](https://github.com/user-attachments/assets/f7904d23-460c-41c1-bdba-66de6f4d1399)
+
