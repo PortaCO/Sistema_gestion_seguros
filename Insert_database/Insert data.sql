@@ -41,9 +41,78 @@ SELECT * FROM CLIENTE;
 SELECT * FROM CLIENTE WHERE ID_AGENTE = 1;
 
 -- Tipo de Poliza
-
 --Importando data de un archivo plano (tipo_poliza_datos.txt)
-SELECT * FROM TIPO_POLIZA
+SELECT * FROM TIPO_POLIZA;
+
+-- Cobertura de tipo de poliza
+INSERT INTO [dbo].[COBERTURA_POLIZA] (ID_TIPO_POLIZA, descripcion_poliza, monto_maximo) VALUES
+(1, 'Cobertura por fallecimiento natural.', 50000.00),
+(1, 'Cobertura por fallecimiento accidental.', 75000.00),
+(1, 'Gastos funerarios.', 10000.00),
+(1, 'Cobertura por invalidez total y permanente.', 30000.00),
+(2, 'Cobertura por daños a terceros.', 20000.00),
+(2, 'Cobertura por robo total del vehículo.', 15000.00),
+(2, 'Cobertura por pérdida parcial del vehículo.', 10000.00),
+(2, 'Cobertura por accidentes del conductor.', 25000.00),
+(2, 'Cobertura por daños por desastres naturales.', 30000.00),
+(3, 'Cobertura de hospitalización.', 40000.00),
+(3, 'Cobertura de cirugías.', 50000.00),
+(3, 'Cobertura de consultas médicas.', 10000.00),
+(3, 'Cobertura de medicamentos.', 15000.00),
+(3, 'Cobertura de emergencias médicas.', 20000.00),
+(4, 'Cobertura por incendio de la vivienda.', 80000.00),
+(4, 'Cobertura por robo de bienes.', 30000.00),
+(4, 'Cobertura por daños por inundación.', 25000.00),
+(4, 'Cobertura por daños estructurales.', 60000.00),
+(5, 'Cobertura por pérdida de equipaje.', 5000.00),
+(5, 'Cobertura por cancelación de viaje.', 10000.00),
+(5, 'Cobertura por emergencias médicas en el extranjero.', 20000.00),
+(5, 'Cobertura por retraso de vuelo.', 3000.00),
+(6, 'Cobertura por fracturas accidentales.', 15000.00),
+(6, 'Cobertura por invalidez temporal.', 20000.00),
+(6, 'Cobertura por pérdida de extremidades.', 30000.00),
+(7, 'Cobertura de responsabilidad civil profesional.', 50000.00),
+(7, 'Cobertura por daños a terceros.', 40000.00),
+(8, 'Cobertura por daños materiales por incendio.', 70000.00),
+(9, 'Cobertura por robo de bienes personales.', 20000.00),
+(10, 'Cobertura por pérdida de mercancía en transporte.', 60000.00);
+GO
+
+SELECT * FROM COBERTURA_POLIZA;
+
+-- Poliza
+INSERT INTO [dbo].[POLIZA] (ID_CLIENTE, ID_TIPO_POLIZA, monto_asegurado, prima_mensual, fecha_expiracion, estado) VALUES
+(1, 1, 50000, 100, '2025-01-01', 'Activa'),
+(2, 1, 75000, 120, '2025-03-01', 'Suspendida'),
+(3, 2, 20000, 80, '2024-12-15', 'Activa'),
+(4, 2, 15000, 70, '2025-02-10', 'Cancelada'),
+(5, 2, 10000, 60, '2024-11-20', 'Activa'),
+(6, 3, 40000, 150, '2025-05-05', 'Activa'),
+(7, 3, 50000, 180, '2025-06-15', 'Suspendida'),
+(8, 3, 10000, 90, '2024-12-30', 'Activa'),
+(9, 3, 15000, 95, '2025-02-25', 'Cancelada'),
+(10, 4, 80000, 200, '2025-07-01', 'Activa'),
+(11, 4, 30000, 110, '2025-03-15', 'Suspendida'),
+(12, 4, 25000, 105, '2025-04-20', 'Activa'),
+(13, 4, 60000, 190, '2025-06-10', 'Cancelada'),
+(14, 5, 5000, 50, '2024-12-10', 'Activa'),
+(15, 5, 10000, 60, '2025-01-15', 'Suspendida'),
+(16, 5, 20000, 85, '2025-03-05', 'Activa'),
+(17, 6, 15000, 70, '2025-02-01', 'Cancelada'),
+(18, 6, 20000, 90, '2025-04-01', 'Activa'),
+(19, 6, 30000, 110, '2025-06-01', 'Suspendida'),
+(20, 7, 50000, 200, '2025-05-10', 'Activa'),
+(1, 7, 40000, 180, '2025-03-20', 'Suspendida'),
+(2, 8, 70000, 210, '2025-04-15', 'Activa'),
+(3, 8, 60000, 190, '2025-07-20', 'Cancelada'),
+(4, 9, 20000, 100, '2025-01-25', 'Activa'),
+(5, 9, 15000, 80, '2024-12-15', 'Suspendida'),
+(6, 10, 60000, 220, '2025-08-01', 'Activa'),
+(7, 10, 50000, 180, '2025-06-01', 'Cancelada'),
+(8, 10, 45000, 170, '2025-04-10', 'Activa'),
+(9, 10, 55000, 200, '2025-05-25', 'Suspendida');
+
+SELECT * FROM POLIZA;
 
 
 
