@@ -1,5 +1,5 @@
---CREATE DATABASE db_gestion_seguros
---go
+CREATE DATABASE db_gestion_seguros
+go
 
 /**/
 USE db_gestion_seguros
