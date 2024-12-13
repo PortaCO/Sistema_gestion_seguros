@@ -81,38 +81,129 @@ GO
 SELECT * FROM COBERTURA_POLIZA;
 
 -- Poliza
-INSERT INTO [dbo].[POLIZA] (ID_CLIENTE, ID_TIPO_POLIZA, monto_asegurado, prima_mensual, fecha_expiracion, estado) VALUES
-(1, 1, 50000, 100, '2025-01-01', 'Activa'),
-(2, 1, 75000, 120, '2025-03-01', 'Suspendida'),
-(3, 2, 20000, 80, '2024-12-15', 'Activa'),
-(4, 2, 15000, 70, '2025-02-10', 'Cancelada'),
-(5, 2, 10000, 60, '2024-11-20', 'Activa'),
-(6, 3, 40000, 150, '2025-05-05', 'Activa'),
-(7, 3, 50000, 180, '2025-06-15', 'Suspendida'),
-(8, 3, 10000, 90, '2024-12-30', 'Activa'),
-(9, 3, 15000, 95, '2025-02-25', 'Cancelada'),
-(10, 4, 80000, 200, '2025-07-01', 'Activa'),
-(11, 4, 30000, 110, '2025-03-15', 'Suspendida'),
-(12, 4, 25000, 105, '2025-04-20', 'Activa'),
-(13, 4, 60000, 190, '2025-06-10', 'Cancelada'),
-(14, 5, 5000, 50, '2024-12-10', 'Activa'),
-(15, 5, 10000, 60, '2025-01-15', 'Suspendida'),
-(16, 5, 20000, 85, '2025-03-05', 'Activa'),
-(17, 6, 15000, 70, '2025-02-01', 'Cancelada'),
-(18, 6, 20000, 90, '2025-04-01', 'Activa'),
-(19, 6, 30000, 110, '2025-06-01', 'Suspendida'),
-(20, 7, 50000, 200, '2025-05-10', 'Activa'),
-(1, 7, 40000, 180, '2025-03-20', 'Suspendida'),
-(2, 8, 70000, 210, '2025-04-15', 'Activa'),
-(3, 8, 60000, 190, '2025-07-20', 'Cancelada'),
-(4, 9, 20000, 100, '2025-01-25', 'Activa'),
-(5, 9, 15000, 80, '2024-12-15', 'Suspendida'),
-(6, 10, 60000, 220, '2025-08-01', 'Activa'),
-(7, 10, 50000, 180, '2025-06-01', 'Cancelada'),
-(8, 10, 45000, 170, '2025-04-10', 'Activa'),
-(9, 10, 55000, 200, '2025-05-25', 'Suspendida');
+INSERT INTO [dbo].[POLIZA] (ID_CLIENTE, ID_TIPO_POLIZA, monto_asegurado, prima_mensual, fecha_inicio, fecha_expiracion, estado) VALUES
+(1, 1, 50000, 100, '2024-01-15', '2028-01-15', 'Activa'),
+(2, 2, 30000, 80, '2024-02-10', '2028-02-10', 'Suspendida'),
+(3, 3, 40000, 120, '2024-03-05', '2028-03-05', 'Activa'),
+(4, 4, 80000, 150, '2024-04-01', '2028-04-01', 'Cancelada'),
+(5, 5, 20000, 60, '2024-05-20', '2028-05-20', 'Activa'),
+(6, 6, 25000, 75, '2024-06-15', '2028-06-15', 'Suspendida'),
+(7, 7, 60000, 130, '2024-07-10', '2028-07-10', 'Activa'),
+(8, 8, 70000, 140, '2024-08-25', '2028-08-25', 'Cancelada'),
+(9, 9, 35000, 90, '2024-09-12', '2028-09-12', 'Activa'),
+(10, 10, 55000, 110, '2024-10-05', '2028-10-05', 'Suspendida'),
+(11, 1, 40000, 95, '2024-01-20', '2028-01-20', 'Activa'),
+(12, 2, 30000, 85, '2024-02-15', '2028-02-15', 'Cancelada'),
+(13, 3, 45000, 100, '2024-03-10', '2028-03-10', 'Activa'),
+(14, 4, 75000, 145, '2024-04-05', '2028-04-05', 'Suspendida'),
+(15, 5, 18000, 55, '2024-05-25', '2028-05-25', 'Activa'),
+(16, 6, 22000, 70, '2024-06-20', '2028-06-20', 'Cancelada'),
+(17, 7, 58000, 125, '2024-07-15', '2028-07-15', 'Activa'),
+(18, 8, 68000, 135, '2024-08-30', '2028-08-30', 'Suspendida'),
+(19, 9, 33000, 85, '2024-09-18', '2028-09-18', 'Activa'),
+(20, 10, 52000, 105, '2024-10-12', '2028-10-12', 'Cancelada'),
+(1, 2, 47000, 115, '2024-01-30', '2028-01-30', 'Activa'),
+(2, 3, 32000, 75, '2024-02-22', '2028-02-22', 'Suspendida'),
+(3, 4, 41000, 110, '2024-03-17', '2028-03-17', 'Activa'),
+(4, 5, 78000, 155, '2024-04-10', '2028-04-10', 'Cancelada'),
+(5, 6, 21000, 65, '2024-05-28', '2028-05-28', 'Activa'),
+(6, 7, 24000, 80, '2024-06-25', '2028-06-25', 'Suspendida'),
+(7, 8, 59000, 120, '2024-07-20', '2028-07-20', 'Activa'),
+(8, 9, 71000, 150, '2024-08-15', '2028-08-15', 'Cancelada'),
+(9, 10, 36000, 95, '2024-09-22', '2028-09-22', 'Activa'),
+(10, 1, 53000, 115, '2024-10-18', '2028-10-18', 'Suspendida');
 
-SELECT * FROM POLIZA;
+SELECT * FROM POLIZA
 
+-- Siniestro
+INSERT INTO [dbo].[SINIESTRO] (ID_POLIZA, descripcion, fecha_siniestro, estado, monto_reclamado) VALUES
+(13, 'Fractura accidental.', '2025-02-24', 'Aprobado', 46661.78),
+(27, 'Pérdida de equipaje en viaje.', '2028-03-06', 'Rechazado', 32926.28),
+(11, 'Hospitalización por emergencia médica.', '2024-07-27', 'Rechazado', 3033.07),
+(15, 'Robo total del vehículo.', '2025-06-14', 'Rechazado', 11434.00),
+(11, 'Daños por desastres naturales.', '2026-11-26', 'Pendiente', 25988.38),
+(10, 'Incendio en la vivienda.', '2024-11-27', 'Aprobado', 26200.50),
+(21, 'Colisión con daños parciales.', '2027-03-13', 'Rechazado', 47521.13),
+(25, 'Robo total del vehículo.', '2025-04-18', 'Rechazado', 40527.64),
+(10, 'Robo total del vehículo.', '2025-07-14', 'Pendiente', 20813.55),
+(23, 'Daños por desastres naturales.', '2027-03-13', 'Aprobado', 17227.94),
+(19, 'Robo total del vehículo.', '2024-01-25', 'Pendiente', 6509.76),
+(15, 'Robo total del vehículo.', '2025-09-29', 'Rechazado', 13079.81),
+(13, 'Robo total del vehículo.', '2027-05-21', 'Aprobado', 9025.08),
+(5, 'Fractura accidental.', '2027-10-10', 'Aprobado', 44567.41),
+(13, 'Daños por desastres naturales.', '2028-03-24', 'Aprobado', 37828.35),
+(23, 'Daños por desastres naturales.', '2025-02-16', 'Pendiente', 38863.05),
+(13, 'Robo total del vehículo.', '2028-01-30', 'Pendiente', 36939.58),
+(19, 'Colisión con daños parciales.', '2024-08-30', 'Pendiente', 41468.51),
+(17, 'Daños por desastres naturales.', '2027-02-06', 'Pendiente', 32164.75),
+(19, 'Accidente de tránsito con daños a terceros.', '2028-09-14', 'Pendiente', 17349.25);
+GO
+SELECT * FROM SINIESTRO
 
+-- Metodo de pago
+INSERT INTO [dbo].[METODO_PAGO] (nombre_metodo, detalle) VALUES
+('Tarjeta de Crédito', 'Visa, MasterCard, American Express'),
+('Tarjeta de Débito', 'Tarjetas de débito de cualquier banco'),
+('Transferencia Bancaria', 'Transferencia interbancaria nacional'),
+('Domiciliación Bancaria', 'Cargo automático mensual en cuenta bancaria'),
+('Efectivo', 'Pago en oficinas o agentes autorizados'),
+('Cheque', 'Pago mediante cheque emitido a nombre de la aseguradora'),
+('PayPal', 'Pago en línea a través de la plataforma PayPal'),
+('Pago en Línea', 'Portal web de la aseguradora'),
+('Criptomoneda', 'Pago mediante Bitcoin, Ethereum u otras criptomonedas'),
+('Depósito Bancario', 'Depósito directo en cuenta bancaria de la aseguradora');
+GO
 
+SELECT *  FROM METODO_PAGO
+
+-- PAGO
+INSERT INTO [dbo].[PAGO] (ID_POLIZA, ID_METODO_PAGO, fecha_pago, monto_pago) VALUES
+(11, 6, '2026-08-11', 332),
+(25, 2, '2024-01-28', 244),
+(10, 5, '2024-12-20', 321),
+(10, 4, '2024-06-06', 307),
+(27, 9, '2028-01-05', 328),
+(27, 6, '2026-06-30', 492),
+(10, 2, '2026-05-25', 417),
+(13, 3, '2026-10-09', 138),
+(11, 3, '2026-02-18', 351),
+(15, 6, '2025-03-01', 112),
+(5, 7, '2027-03-29', 283),
+(10, 7, '2025-11-20', 296),
+(27, 4, '2027-03-14', 412),
+(21, 10, '2025-11-04', 253),
+(1, 2, '2027-02-21', 418),
+(5, 4, '2026-10-24', 142),
+(15, 9, '2024-09-17', 90),
+(17, 4, '2027-06-11', 250),
+(19, 9, '2026-04-11', 163),
+(1, 1, '2028-01-10', 201);
+
+SELECT * FROM PAGO
+
+-- Detalle de pago
+INSERT INTO [dbo].[DETALLE_PAGO] (ID_PAGO, desglose, monto) VALUES
+(1, 'Prima mensual completa', 332),
+(2, 'Prima mensual (parte 1)', 61),
+(2, 'Prima mensual (parte 2)', 183),
+(3, 'Prima mensual completa', 321),
+(4, 'Prima mensual completa', 307),
+(5, 'Prima mensual completa', 328),
+(6, 'Prima mensual completa', 492),
+(7, 'Prima mensual completa', 417),
+(8, 'Prima mensual (parte 1)', 62),
+(8, 'Prima mensual (parte 2)', 76),
+(9, 'Prima mensual completa', 351),
+(10, 'Prima mensual completa', 112),
+(11, 'Prima mensual completa', 283),
+(12, 'Prima mensual completa', 296),
+(13, 'Prima mensual completa', 412),
+(14, 'Prima mensual (parte 1)', 183),
+(14, 'Prima mensual (parte 2)', 70),
+(15, 'Prima mensual completa', 418),
+(16, 'Prima mensual completa', 142),
+(17, 'Prima mensual completa', 90),
+(18, 'Prima mensual (parte 1)', 125),
+(18, 'Prima mensual (parte 2)', 125),
+(19, 'Prima mensual completa', 163),
+(20, 'Prima mensual completa', 201);
