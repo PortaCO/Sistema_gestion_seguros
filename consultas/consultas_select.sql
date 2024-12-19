@@ -133,9 +133,76 @@ SELECT
 	CONCAT(A.nombre,' ' , A.apellido) AS 'Nombre del agente',
 	C.ID AS 'ID del cliente'
 FROM CLIENTE C
-INNER JOIN AGENTE A ON A.ID = C.ID_AGENTE
+INNER JOIN AGENTE A ON A.ID = C.ID_AGENTE;
 
 -- LEFT JOIN, RIGHT JOIN, FULL JOIN
 
+ALTER TABLE [dbo].[AGENTE]
+ADD DNI VARCHAR(15) NULL;
+
+UPDATE [dbo].[AGENTE]
+SET DNI = '95856215'
+WHERE ID = 1;
+
+UPDATE [dbo].[AGENTE]
+SET DNI = '23585115'
+WHERE ID = 2;
+
+UPDATE [dbo].[AGENTE]
+SET DNI = '34585129'
+WHERE ID = 3;
+
+UPDATE [dbo].[AGENTE]
+SET DNI = '42315681'
+WHERE ID = 4;
+
+UPDATE [dbo].[AGENTE]
+SET DNI = '56487412'
+WHERE ID = 5;
+
+UPDATE [dbo].[AGENTE]
+SET DNI = '62578915'
+WHERE ID = 6;
+
+SELECT * FROM POLIZA
+SELECT *  FROM PAGO
+SELECT * FROM DETALLE_PAGO
 
 
+-- Seleccion de relacion entre Agente - Cliente - Poliza
+-- Polizas de los clientes
+SELECT
+	A.ID AS 'Id del agente',
+	CONCAT(A.nombre,' ' , A.apellido) AS 'Nombre del agente',
+	A.zona AS 'Zona del agente',
+	C.ID AS 'ID del cliente',
+	CONCAT(C.nombre,' ' , C.apellido) AS 'Nombre del cliente',
+	C.DNI AS 'DNI del cliente',
+	TP.nombre_tipo AS 'Tipo de poliza',
+	P.monto_asegurado,
+	P.prima_mensual
+FROM CLIENTE C
+INNER JOIN AGENTE A ON A.ID = C.ID_AGENTE
+INNER JOIN POLIZA P ON P.ID_CLIENTE = C.ID
+INNER JOIN TIPO_POLIZA TP ON TP.ID = P.ID_TIPO_POLIZA
+ORDER BY 1 ASC
+
+-- Modificando observacion de que la prima mensual es establecida por el monto asegurado y fecha inicio e fin
+UPDATE [dbo].[POLIZA]
+SET prima_mensual = monto_asegurado / DATEDIFF(MONTH, fecha_inicio, fecha_expiracion)
+WHERE ROUND(DATEDIFF(MONTH, fecha_inicio, fecha_expiracion),0) > 0;
+
+
+-- Modificando observacion entre el pago mensual realizado con la prima mensual establecia en poliza
+UPDATE PG
+SET PG.monto_pago = P.prima_mensual
+FROM PAGO PG
+INNER JOIN POLIZA P ON P.ID = PG.ID_POLIZA
+WHERE P.ID = PG.ID_POLIZA
+
+SELECT 
+	P.monto_asegurado,
+	P.prima_mensual,
+	PG.monto_pago
+FROM POLIZA P
+INNER JOIN PAGO PG ON P.ID = PG.ID_POLIZA
