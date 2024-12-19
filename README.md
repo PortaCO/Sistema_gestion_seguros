@@ -21,7 +21,6 @@ Debe existir un historial de cambios de estado para cada siniestro, incluyendo l
 ### Pagos:
 Cada pago debe estar asociado a una póliza específica.
 Se debe registrar la fecha del pago, el monto pagado y el método de pago (tarjeta, transferencia, efectivo).
-El sistema debe permitir calcular el estado de cuenta de cada póliza en función de los pagos realizados.
 
 ## Reglas del Negocio <br>
 -  Un cliente no puede tener más de una póliza del mismo tipo con la misma fecha de inicio.
