@@ -44,6 +44,20 @@ SELECT * FROM CLIENTE WHERE ID_AGENTE = 1;
 --Importando data de un archivo plano (tipo_poliza_datos.txt)
 SELECT * FROM TIPO_POLIZA;
 
+-- OBSERVACION
+INSERT INTO [dbo].[TIPO_POLIZA] (nombre_tipo, descripcion) VALUES
+('Seguro de Auto', 'Cobertura por daños, robo o accidentes de vehículos automotores'),
+('Seguro de Hogar', 'Protección contra incendios, robos y desastres naturales en el hogar'),
+('Seguro de Vida', 'Cobertura por fallecimiento o invalidez del asegurado'),
+('Seguro de Salud', 'Cobertura médica por hospitalización, enfermedades y emergencias'),
+('Seguro de Viaje', 'Protección durante viajes por pérdida de equipaje o emergencias médicas'),
+('Seguro de Accidentes', 'Cobertura por accidentes personales que causen lesiones o invalidez'),
+('Seguro de Empresa', 'Cobertura contra riesgos específicos de negocios y empresas'),
+('Seguro de Educación', 'Plan de ahorro y cobertura para gastos educativos'),
+('Seguro de Responsabilidad Civil', 'Cobertura por daños a terceros'),
+('Seguro de Mascotas', 'Cobertura médica para mascotas por enfermedades y accidentes');
+
+
 -- Cobertura de tipo de poliza
 INSERT INTO [dbo].[COBERTURA_POLIZA] (ID_TIPO_POLIZA, descripcion_poliza, monto_maximo) VALUES
 (1, 'Cobertura por fallecimiento natural.', 50000.00),
