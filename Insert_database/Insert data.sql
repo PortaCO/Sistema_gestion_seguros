@@ -44,7 +44,7 @@ SELECT * FROM CLIENTE WHERE ID_AGENTE = 1;
 --Importando data de un archivo plano (tipo_poliza_datos.txt)
 SELECT * FROM TIPO_POLIZA;
 
--- OBSERVACION
+-- Tipo de Poliza
 INSERT INTO [dbo].[TIPO_POLIZA] (nombre_tipo, descripcion) VALUES
 ('Seguro de Auto', 'Cobertura por daños, robo o accidentes de vehículos automotores'),
 ('Seguro de Hogar', 'Protección contra incendios, robos y desastres naturales en el hogar'),
@@ -101,13 +101,13 @@ INSERT INTO [dbo].[POLIZA] (ID_CLIENTE, ID_TIPO_POLIZA, monto_asegurado, prima_m
 (3, 3, 40000, 833.33, '2024-03-05', '2028-03-05', 'Activa'),
 (4, 4, 80000, 1666.67, '2024-04-01', '2028-04-01', 'Cancelada'),
 (5, 5, 20000, 416.67, '2024-05-20', '2028-05-20', 'Activa'),
-(6, 6, 25000, 520.83, '2024-06-15', '2028-06-15', 'Suspendida'),
+(6, 6, 25000, 520.83, '2024-06-15', '2028-06-15', 'Activa'),
 (7, 7, 60000, 1250.00, '2024-07-10', '2028-07-10', 'Activa'),
 (8, 8, 70000, 1458.33, '2024-08-25', '2028-08-25', 'Cancelada'),
 (9, 9, 35000, 729.17, '2024-09-12', '2028-09-12', 'Activa'),
-(10, 10, 55000, 1145.83, '2024-10-05', '2028-10-05', 'Suspendida'),
+(10, 10, 55000, 1145.83, '2024-10-05', '2028-10-05', 'Activa'),
 (11, 1, 40000, 833.33, '2024-01-20', '2028-01-20', 'Activa'),
-(12, 2, 30000, 625.00, '2024-02-15', '2028-02-15', 'Cancelada'),
+(12, 2, 30000, 625.00, '2024-02-15', '2028-02-15', 'Activa'),
 (13, 3, 45000, 937.50, '2024-03-10', '2028-03-10', 'Activa'),
 (14, 4, 75000, 1562.50, '2024-04-05', '2028-04-05', 'Suspendida'),
 (15, 5, 18000, 375.00, '2024-05-25', '2028-05-25', 'Activa'),
@@ -126,7 +126,7 @@ INSERT INTO [dbo].[POLIZA] (ID_CLIENTE, ID_TIPO_POLIZA, monto_asegurado, prima_m
 (8, 9, 71000, 1479.17, '2024-08-15', '2028-08-15', 'Cancelada'),
 (9, 10, 36000, 750.00, '2024-09-22', '2028-09-22', 'Activa'),
 (10, 1, 53000, 1104.17, '2024-10-18', '2028-10-18', 'Suspendida');
-
+GO
 
 SELECT * FROM POLIZA
 
@@ -170,6 +170,7 @@ INSERT INTO [dbo].[METODO_PAGO] (nombre_metodo, detalle) VALUES
 GO
 
 SELECT *  FROM METODO_PAGO
+delete METODO_PAGO
 
 -- PAGO
 INSERT INTO [dbo].[PAGO] (ID_POLIZA, ID_METODO_PAGO, fecha_pago, monto_pago) VALUES
